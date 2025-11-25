@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple JS Cricket Game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="
+      let youChoose = 'bat';
+        
+    let compChoose = computerChoice();
+
+    let resultMSG;
+    if(compChoose == 'bat'){
+      resultMSG = 'ITS TIE';
+    }else if(compChoose == 'ball'){
+      resultMSG = 'YOU WON';
+    }else{
+      resultMSG = 'YOU LOOSE';
+    }
+
+    alert(`You choosed bat and computer choosed ${compChoose} so ${resultMSG}`);
+    "
+    >
+      BAT
+    </button>
+    <button
+      onclick="
+        youChoose = 'ball';
+
+     compChoose = computerChoice();
+
+    resultMSG;
+    if(compChoose == 'bat'){
+      resultMSG = 'YOU LOOSE';
+    }else if(compChoose == 'ball'){
+      resultMSG = 'ITS TIE';
+    }else{
+      resultMSG = 'YOU WON';
+    }
+
+    alert(`You choosed ball and computer choosed ${compChoose} so ${resultMSG}`);
+    "
+    >
+      BALL
+    </button>
+    <button
+      onclick="
+       youChoose = 'stump';
+    
+    compChoose = computerChoice();
+      
+    resultMSG = 0;
+    if(compChoose == 'bat'){
+      resultMSG = 'YOU WON';
+    }else if(compChoose == 'ball'){
+      resultMSG = 'YOU LOOSE';
+    }else{
+      resultMSG = 'ITS TIE';
+    }
+
+    alert(`You choosed stump and computer choosed ${compChoose} so ${resultMSG}`);
+    "
+    >
+      STUMP
+    </button>
+
+    <script>
+      function computerChoice() {
+
+        randomNum = Math.random() * 3;
+
+        if (randomNum >= 0 && randomNum <= 1) {
+          return 'bat';
+        } else if (randomNum >= 1 && randomNum <= 2) {
+          return 'ball';
+        } else {
+          return 'stump';
+        }
+      }
+    </script>
+  </body>
+</html>
